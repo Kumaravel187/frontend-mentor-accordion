@@ -12,7 +12,13 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 10rem 1rem;
   font-family: "Kumbh Sans", sans-serif;
   background-image: linear-gradient($Softviolet, $Softblue);
+}
+
+@media (min-width: 56.25rem) {
+  body {
+    padding: 5rem;
+  }
 }
