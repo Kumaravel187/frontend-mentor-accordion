@@ -1,30 +1,38 @@
+/* Set the base styling for the entire HTML document */
 html {
   box-sizing: border-box;
-  font-size: 100%;
+  font-size: 100%; /* Reset font size for consistent sizing */
 }
 
+/* Apply the 'box-sizing' property to all elements and their pseudo-elements */
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: inherit; /* Inherit the 'box-sizing' property from the parent */
 }
 
+/* Basic styling for the body of the webpage */
 body {
-  min-height: 100vh;
-  margin: 0;
-  padding: 10rem 1rem;
-  font-family: "Kumbh Sans", sans-serif;
-  background-image: linear-gradient($Softviolet, $Softblue);
+  min-height: 100vh; /* Ensure the body covers at least the viewport height */
+  margin: 0; /* Remove default margin to avoid unexpected spacing */
+  padding: 10rem 1rem; /* Vertical and horizontal padding for the content area */
+  font-family: "Kumbh Sans", sans-serif; /* Set the primary font family */
+  background-image: linear-gradient(
+    $Softviolet,
+    $Softblue
+  ); /* Background gradient */
 }
 
+/* Reset margins for various heading elements */
 h1,
 h2,
 h3 {
-  margin-top: 0;
+  margin-top: 0; /* Remove default top margin to avoid spacing inconsistencies */
 }
 
+/* Media query for larger screens (min-width: 56.25rem) */
 @media (min-width: 56.25rem) {
   body {
-    padding: 5rem;
+    padding: 5rem; /* Adjust content padding for larger screens */
   }
 }

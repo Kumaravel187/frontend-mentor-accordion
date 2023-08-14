@@ -1,5 +1,4 @@
-// Mobile view first
-
+// Mobile view styles (default)
 .card {
   background: #ffffff;
   border-radius: 2rem;
@@ -10,15 +9,16 @@
   background-size: 15rem;
   padding: 2.875rem 1.5rem;
 
+  // Hide the box in mobile view
   &__box {
     display: none;
   }
 
+  // Image container positioning
   &__image {
     position: relative;
-    // border: 1px solid white;
-    // hide image overflow
 
+    // Image styles
     .img {
       position: absolute;
       top: -6.8rem;
@@ -29,19 +29,24 @@
       max-width: 15rem;
       height: auto;
 
-      //It will take the a width of 100% until it reaches 25rem and above. Once above 25rem it will stay at its max width value
+      // Responsive width adjustment
     }
   }
 
+  // Adjust text padding
   &__text {
     padding-top: 7rem;
   }
 
+  // Styling for accordion items
   .accordion__item {
+    // Add border and padding
     border-bottom: 1px solid $Darkgrayishblue;
     padding-top: 1rem;
+
+    // Question styling
     .accordion__question {
-      // position: relative;
+      // Align question and icon
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -55,15 +60,17 @@
       color: $Verydarkgrayishblue;
       margin-bottom: 1rem;
 
+      // Styling for open question
       &.open {
         font-weight: bold;
       }
 
+      // Arrow icon styling
       &::after {
         content: "";
         display: block;
-        width: 0.625rem; /* Set a width for the pseudo-element */
-        height: 0.625rem; /* Set a height for the pseudo-element */
+        width: 0.625rem;
+        height: 0.625rem;
         background-image: url(/images/icon-arrow-down.svg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -72,15 +79,18 @@
         transition: transform 300ms ease-in-out;
       }
 
+      // Focus styling
       &:focus {
         outline-color: red;
       }
     }
 
+    // Additional question heading styles
     h2 {
       margin-bottom: 1rem;
     }
 
+    // Styling for open question
     .accordion__question.open {
       font-weight: 700;
       &::after {
@@ -88,44 +98,44 @@
       }
     }
 
+    // Content styles
     .accordion__content {
       font-size: 0.75rem;
       line-height: 1.5;
       margin-bottom: 1rem;
     }
 
+    // Collapsible content styles
     .accordion__collapse.collapse {
       display: none;
     }
 
+    // Animating collapsing
     .accordion__collapse.collapsing {
+      // Further improvement: Link to resource for animation
     }
 
+    // Display open content
     .accordion__collapse.open {
       display: block;
     }
   }
 }
 
-// .collapse {
-//   display: none;
-// }
-
-// desktop view > 1000px
-
+// Desktop view styles (min-width: 56.25rem)
 @media (min-width: 56.25rem) {
   .card {
+    // Positioning and layout for desktop view
     position: relative;
     display: flex;
-    // border: 2px solid black;
     padding: 4.375rem 6.25rem 4.375rem 0;
     margin: 0 auto;
     background-image: url("/images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
-    // position the pattern below the image
     background-size: 45%;
-    background-position: -13% center; //
+    background-position: -13% center;
 
+    // Styling for the box
     &__box {
       display: block;
       position: absolute;
@@ -135,24 +145,25 @@
       z-index: 1;
     }
 
+    // Image and text container styles
     &__image {
       display: flex;
       align-items: center;
       padding-right: 2rem;
       overflow: hidden;
 
+      // Image positioning and styles
       .img {
         position: relative;
         top: auto;
         left: auto;
         max-width: 25rem;
-        // image to shift left by 4rem
         transform: translate(-4rem);
       }
     }
 
+    // Text container adjustments
     &__text {
-      // make the image and text items same width
       flex: 1;
       padding-top: 0;
     }
