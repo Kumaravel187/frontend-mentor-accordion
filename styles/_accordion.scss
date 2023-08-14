@@ -53,6 +53,7 @@
       font-size: 0.875rem;
       font-family: "Kumbh Sans", sans-serif;
       color: $Verydarkgrayishblue;
+      margin-bottom: 1rem;
 
       &.open {
         font-weight: bold;
@@ -67,19 +68,48 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+        border: none;
+        transition: transform 300ms ease-in-out;
+      }
+
+      &:focus {
+        outline-color: red;
       }
     }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .accordion__question.open {
+      font-weight: 700;
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
     .accordion__content {
       font-size: 0.75rem;
       line-height: 1.5;
       margin-bottom: 1rem;
     }
 
-    h2 {
-      margin-bottom: 1rem;
+    .accordion__collapse.collapse {
+      display: none;
+    }
+
+    .accordion__collapse.collapsing {
+    }
+
+    .accordion__collapse.open {
+      display: block;
     }
   }
 }
+
+// .collapse {
+//   display: none;
+// }
 
 // desktop view > 1000px
 

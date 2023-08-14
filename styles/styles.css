@@ -43,6 +43,7 @@
   font-size: 0.875rem;
   font-family: "Kumbh Sans", sans-serif;
   color: hsl(237, 12%, 33%);
+  margin-bottom: 1rem;
 }
 .card .accordion__item .accordion__question.open {
   font-weight: bold;
@@ -56,14 +57,31 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  border: none;
+  transition: transform 300ms ease-in-out;
+}
+.card .accordion__item .accordion__question:focus {
+  outline-color: red;
+}
+.card .accordion__item h2 {
+  margin-bottom: 1rem;
+}
+.card .accordion__item .accordion__question.open {
+  font-weight: 700;
+}
+.card .accordion__item .accordion__question.open::after {
+  transform: rotate(180deg);
 }
 .card .accordion__item .accordion__content {
   font-size: 0.75rem;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
-.card .accordion__item h2 {
-  margin-bottom: 1rem;
+.card .accordion__item .accordion__collapse.collapse {
+  display: none;
+}
+.card .accordion__item .accordion__collapse.open {
+  display: block;
 }
 
 @media (min-width: 56.25rem) {
