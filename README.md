@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/Kumaravel187/frontend-mentor-accordion
+- Solution URL: [https://github.com/Kumaravel187/frontend-mentor-accordion](https://thriving-sunflower-e9b5fe.netlify.app/)
 
 ## My Process
 
